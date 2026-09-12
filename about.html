@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Clear Flow Botswana</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0B2341',
+                            dark: '#071629',
+                            blue: '#0284C7',
+                            cyan: '#00A3E0',
+                            light: '#F0F7FF',
+                            accent: '#38BDF8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/logo.png" alt="Clear Flow Logo" class="h-10 w-auto object-contain" 
+                     onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')">
+                <div class="hidden w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-brand-cyan shadow-sm">
+                    <i data-lucide="zap" class="w-5 h-5 fill-current"></i>
+                </div>
+                <div class="leading-tight">
+                    <span class="text-xl font-extrabold tracking-tight text-brand-navy block">CLEAR</span>
+                    <span class="text-xl font-bold tracking-tight text-brand-blue block -mt-1.5">FLOW</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                <a href="index.html" class="hover:text-brand-blue transition">Home</a>
+                <a href="leakdetection.html" class="hover:text-brand-blue transition">Leak Detection</a>
+                <a href="catalogue.html" class="hover:text-brand-blue transition">Catalogue</a>
+                <a href="about.html" class="text-brand-blue font-bold transition">About</a>
+                <a href="contact.html" class="hover:text-brand-blue transition">Contact</a>
+                <a href="book.html" class="hover:text-brand-blue transition">Booking</a>
+            </nav>
+
+            <!-- Action CTA -->
+            <div>
+                <a href="book.html" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-brand-navy text-white hover:bg-brand-blue transition shadow">
+                    Book Service
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="bg-white border-b border-slate-200/80 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-blue bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+                    About Clear Flow
+                </span>
+                <h1 class="text-3xl sm:text-4xl font-black text-brand-navy tracking-tight mt-3">
+                    Pioneering Smarter Water Solutions in Botswana
+                </h1>
+                <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MISSION & STORY ================= -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1 w-full space-y-12">
+        
+        <!-- Story & Mission Grid -->
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-5">
+                <h2 class="text-2xl sm:text-3xl font-black text-brand-navy tracking-tight">
+                    Preserving Water, Protecting Property
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                    <strong>Clear Flow</strong> was founded to bridge the gap between traditional guesswork plumbing and modern diagnostic technology. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                </p>
+                <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                    <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="target" class="w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-brand-navy">Pinpoint Accuracy</h4>
+                            <p class="text-[11px] text-slate-500 mt-0.5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="leaf" class="w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-brand-navy">Eco-Conscious</h4>
+                            <p class="text-[11px] text-slate-500 mt-0.5">Saving thousands of liters of treated water daily. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision Card Box -->
+            <div class="lg:col-span-5">
+                <div class="bg-gradient-to-br from-brand-navy via-slate-900 to-brand-navy text-white rounded-3xl p-8 shadow-xl space-y-6 border border-slate-800">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-brand-cyan text-xs font-bold tracking-wider">
+                        <i data-lucide="compass" class="w-3.5 h-3.5"></i> Our Commitment
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-black text-white leading-snug">
+                        "Water today. A better tomorrow."
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias.
+                    </p>
+                    <div class="pt-2 border-t border-white/10 flex items-center justify-between text-xs text-slate-300">
+                        <span>Based in Gaborone</span>
+                        <span class="text-brand-cyan font-bold">Serving Nationwide</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= CORE PILLARS ================= -->
+        <section class="space-y-6 pt-6">
+            <div class="text-center max-w-2xl mx-auto">
+                <h3 class="text-2xl font-black text-brand-navy tracking-tight">Why Choose Clear Flow</h3>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pillar 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center">
+                        <i data-lucide="radio" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-navy text-base">Advanced Tech</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center">
+                        <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-navy text-base">Zero Guesswork</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center">
+                        <i data-lucide="droplet" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-navy text-base">Pure Water Systems</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.
+                    </p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center">
+                        <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-navy text-base">Clear Reports</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTORS WE SERVE ================= -->
+        <section class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm space-y-6">
+            <div class="max-w-2xl">
+                <h3 class="text-2xl font-black text-brand-navy tracking-tight">Sectors We Support</h3>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm">
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                    <i data-lucide="home" class="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5"></i>
+                    <div>
+                        <h5 class="font-bold text-brand-navy">Residential Homes</h5>
+                        <p class="text-xs text-slate-500 mt-1">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                    <i data-lucide="building-2" class="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5"></i>
+                    <div>
+                        <h5 class="font-bold text-brand-navy">Commercial & Retail</h5>
+                        <p class="text-xs text-slate-500 mt-1">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                    <i data-lucide="factory" class="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5"></i>
+                    <div>
+                        <h5 class="font-bold text-brand-navy">Industrial & Plots</h5>
+                        <p class="text-xs text-slate-500 mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA BANNER ================= -->
+        <section class="bg-gradient-to-r from-brand-navy to-brand-blue rounded-3xl p-8 sm:p-12 text-white shadow-xl text-center space-y-6">
+            <h3 class="text-2xl sm:text-3xl font-black tracking-tight max-w-xl mx-auto">
+                Ready to Stop Water Loss or Upgrade Your Filtration?
+            </h3>
+            <p class="text-xs sm:text-sm text-blue-100 max-w-lg mx-auto">
+                Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-2">
+                <a href="book.html" class="px-6 py-3.5 rounded-xl bg-white text-brand-navy font-bold text-xs hover:bg-slate-100 transition shadow">
+                    Book Leak Detection →
+                </a>
+                <a href="contact.html" class="px-6 py-3.5 rounded-xl bg-brand-navy/60 border border-white/20 text-white font-bold text-xs hover:bg-brand-navy transition">
+                    Contact Our Team
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="mt-auto bg-brand-dark border-t border-slate-800 text-slate-400 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <img src="assets/logo.png" alt="Clear Flow Logo" class="h-8 w-auto object-contain" 
+                         onerror="this.style.display='none'">
+                    <span class="text-lg font-bold text-white tracking-wider">CLEAR FLOW</span>
+                </div>
+
+                <nav class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+                    <a href="index.html" class="hover:text-white transition">Home</a>
+                    <a href="leakdetection.html" class="hover:text-white transition">Leak Detection</a>
+                    <a href="catalogue.html" class="hover:text-white transition">Catalogue</a>
+                    <a href="about.html" class="text-brand-cyan transition">About</a>
+                    <a href="contact.html" class="hover:text-white transition">Contact</a>
+                    <a href="book.html" class="hover:text-white transition">Booking</a>
+                </nav>
+
+                <div class="flex items-center gap-4 text-slate-400">
+                    <a href="#" class="hover:text-white transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <a href="#" class="hover:text-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] gap-4">
+                <p>© 2026 Clear Flow (Pty) Ltd. All rights reserved.</p>
+                <p class="text-slate-500">Water today. A better tomorrow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

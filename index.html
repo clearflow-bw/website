@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Flow | Water Leak Detection & Purification in Botswana</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0B2341',
+                            dark: '#071629',
+                            blue: '#0284C7',
+                            cyan: '#00A3E0',
+                            light: '#F0F7FF',
+                            accent: '#38BDF8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-2.5 group">
+                <img src="assets/logo.png" alt="Clear Flow" class="h-9 w-auto">
+                <div class="leading-tight">
+                    <span class="text-xl font-extrabold tracking-tight text-brand-navy block">CLEAR</span>
+                    <span class="text-xl font-bold tracking-tight text-brand-blue block -mt-1.5">FLOW</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                <a href="index.html" class="text-brand-blue font-semibold transition">Home</a>
+                <a href="leakdetection.html" class="hover:text-brand-blue transition">Leak Detection</a>
+                <a href="catalogue.html" class="hover:text-brand-blue transition">Catalogue</a>
+                <a href="about.html" class="hover:text-brand-blue transition">About</a>
+                <a href="contact.html" class="hover:text-brand-blue transition">Contact</a>
+                <a href="book.html" class="hover:text-brand-blue transition">Booking</a>
+            </nav>
+
+            <!-- Right CTA -->
+            <div class="flex items-center">
+                <a href="book.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-brand-navy text-white hover:bg-brand-blue transition shadow">
+                    Book Service
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-brand-light/60 via-white to-white py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <!-- Left Content -->
+                <div class="space-y-6">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-navy tracking-tight leading-[1.1]">
+                        Find the Leak. <br>
+                        <span class="text-brand-blue">Save the Water.</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                        Advanced underground water leakage detection, water purification and descaling solutions for homes, businesses, and industry in Botswana.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2 justify-center">
+                        <a href="book.html" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-brand-blue text-white font-semibold text-sm shadow-md hover:bg-sky-600 transition group">
+                            Book Leak Detection
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition"></i>
+                        </a>
+                        <a href="catalogue.html" class="inline-flex items-center px-6 py-3.5 rounded-lg border border-slate-300 bg-white text-brand-navy font-semibold text-sm hover:border-brand-blue hover:text-brand-blue transition shadow-sm">
+                            Explore Catalogue
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= OUR SERVICES ================= -->
+    <section class="py-16 bg-slate-50 border-t border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-brand-navy tracking-tight">Our Services</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Reliable water solutions for a healthier, more sustainable tomorrow.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center mb-5 border border-blue-100">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-navy mb-2">Underground Water Leakage Detection</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Non-invasive acoustic detection to find hidden leaks pinpoint accurately and save valuable water.
+                        </p>
+                    </div>
+                    <a href="leakdetection.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-blue hover:text-brand-navy transition">
+                        Book Inspection <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center mb-5 border border-blue-100">
+                            <i data-lucide="filter" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-navy mb-2">Tap Water Filters & Purifiers</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Clean, safe and great-tasting pure drinking water setups for your home, clinic, or business.
+                        </p>
+                    </div>
+                    <a href="catalogue.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-blue hover:text-brand-navy transition">
+                        View Purifiers <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center mb-5 border border-blue-100">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-navy mb-2">Central Water Descalers</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Protect your pipes, solar geysers, and home appliances from harsh limescale buildup.
+                        </p>
+                    </div>
+                    <a href="catalogue.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-blue hover:text-brand-navy transition">
+                        Learn More <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-brand-navy tracking-tight">How It Works</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Simple. Efficient. Professional.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <!-- Step 1 -->
+                <div class="text-center space-y-3">
+                    <div class="w-14 h-14 rounded-full bg-brand-navy text-brand-cyan flex items-center justify-center mx-auto text-lg font-bold shadow-md">
+                        1
+                    </div>
+                    <h4 class="font-bold text-brand-navy text-base">Book Online</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Choose your service, preferred date and location in Botswana.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center space-y-3">
+                    <div class="w-14 h-14 rounded-full bg-brand-navy text-brand-cyan flex items-center justify-center mx-auto text-lg font-bold shadow-md">
+                        2
+                    </div>
+                    <h4 class="font-bold text-brand-navy text-base">We Inspect</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Our trained technicians arrive with advanced acoustic equipment.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center space-y-3">
+                    <div class="w-14 h-14 rounded-full bg-brand-navy text-brand-cyan flex items-center justify-center mx-auto text-lg font-bold shadow-md">
+                        3
+                    </div>
+                    <h4 class="font-bold text-brand-navy text-base">Get Results</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Receive a clear diagnostic report and precise repair recommendations.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center space-y-3">
+                    <div class="w-14 h-14 rounded-full bg-brand-navy text-brand-cyan flex items-center justify-center mx-auto text-lg font-bold shadow-md">
+                        4
+                    </div>
+                    <h4 class="font-bold text-brand-navy text-base">Enjoy the Benefits</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Save water bills, prevent damage, and protect your property value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FEATURED PRODUCTS ================= -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-end justify-between mb-10">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-brand-navy tracking-tight">Featured Products</h2>
+                    <p class="text-slate-600 mt-1 text-sm">Quality water solutions for your home and business.</p>
+                </div>
+                <a href="catalogue.html" class="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-brand-blue hover:text-brand-navy transition">
+                    View All Products <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-brand-navy text-base">Under-Sink RO Purifier</h3>
+                        <p class="text-xs text-slate-500 mt-1">Clean, pure water at your tap with 5-stage filtration.</p>
+                    </div>
+                    <a href="catalogue.html" class="mt-4 w-full text-center py-2 px-3 rounded-lg bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-700 text-xs font-semibold transition">
+                        View Details
+                    </a>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-brand-navy text-base">Central Water Descaler</h3>
+                        <p class="text-xs text-slate-500 mt-1">Protects your entire water system from hard minerals.</p>
+                    </div>
+                    <a href="catalogue.html" class="mt-4 w-full text-center py-2 px-3 rounded-lg bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-700 text-xs font-semibold transition">
+                        View Details
+                    </a>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+                    <div class="aspect-square bg-slate-100 flex items-center justify-center p-6 border-b border-slate-100 text-slate-400">
+                        <div class="text-center">
+                            <i data-lucide="box" class="w-12 h-12 mx-auto mb-2 stroke-1"></i>
+                            <span class="text-xs">Product Image</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-brand-navy text-base">Replacement Filter Cartridges</h3>
+                            <p class="text-xs text-slate-500 mt-1">Maintain continuous water quality and safety.</p>
+                        </div>
+                        <a href="catalogue.html" class="mt-4 w-full text-center py-2 px-3 rounded-lg bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-700 text-xs font-semibold transition">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PARTNER / CONTACT BANNER ================= -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-brand-navy via-slate-900 to-brand-navy rounded-2xl p-8 lg:p-10 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div class="space-y-4 max-w-xl">
+                    <h3 class="text-2xl sm:text-3xl font-bold tracking-tight">Your Trusted Water Solutions Partner in Botswana</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm">Professional. Reliable. Local.</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 rounded-md bg-white/10 text-white text-xs flex items-center gap-1.5 border border-white/10">
+                            <i data-lucide="home" class="w-3.5 h-3.5 text-brand-cyan"></i> Residential
+                        </span>
+                        <span class="px-3 py-1 rounded-md bg-white/10 text-white text-xs flex items-center gap-1.5 border border-white/10">
+                            <i data-lucide="building-2" class="w-3.5 h-3.5 text-brand-cyan"></i> Commercial
+                        </span>
+                        <span class="px-3 py-1 rounded-md bg-white/10 text-white text-xs flex items-center gap-1.5 border border-white/10">
+                            <i data-lucide="factory" class="w-3.5 h-3.5 text-brand-cyan"></i> Industrial
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Contact Quick Card -->
+                <div class="bg-white/10 backdrop-blur border border-white/15 rounded-xl p-5 w-full lg:w-80 space-y-3">
+                    <h4 class="text-sm font-semibold text-brand-cyan">Get in Touch</h4>
+                    <div class="space-y-2 text-xs text-slate-200">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-brand-cyan"></i> +267 74 265 215
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-brand-cyan"></i> clearflowbw@gmail.com
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-brand-cyan"></i> Gaborone, Botswana
+                        </div>
+                    </div>
+                    <a href="contact.html" class="block text-center py-2 px-3 rounded-lg bg-brand-cyan hover:bg-sky-400 text-brand-navy font-bold text-xs transition">
+                        Contact Us →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="mt-auto bg-brand-dark border-t border-slate-800 text-slate-400 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2.5">
+                    <img src="assets/logo.png" alt="Clear Flow" class="h-8 w-auto">
+                    <div class="leading-tight">
+                        <span class="text-lg font-extrabold tracking-tight text-white block">CLEAR</span>
+                        <span class="text-lg font-bold tracking-tight text-brand-cyan block -mt-1">FLOW</span>
+                    </div>
+                </div>
+
+                <nav class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+                    <a href="index.html" class="hover:text-white transition">Home</a>
+                    <a href="leakdetection.html" class="hover:text-white transition">Leak Detection</a>
+                    <a href="catalogue.html" class="hover:text-white transition">Catalogue</a>
+                    <a href="about.html" class="hover:text-white transition">About</a>
+                    <a href="contact.html" class="hover:text-white transition">Contact</a>
+                    <a href="book.html" class="hover:text-white transition">Booking</a>
+                </nav>
+
+                <div class="flex items-center gap-4 text-slate-400">
+                    <a href="#" class="hover:text-white transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <a href="#" class="hover:text-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] gap-4">
+                <p>© 2026 Clear Flow (Pty) Ltd. All rights reserved.</p>
+                <p class="text-slate-500">Water today. A better tomorrow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

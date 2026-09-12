@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalogue | Clear Flow Botswana</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0B2341',
+                            dark: '#071629',
+                            blue: '#0284C7',
+                            cyan: '#00A3E0',
+                            light: '#F0F7FF',
+                            accent: '#38BDF8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- ================= NAVBAR (NO SHOPPING BAG) ================= -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/logo.png" alt="Clear Flow Logo" class="h-10 w-auto object-contain" 
+                     onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')">
+                <div class="hidden w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-brand-cyan shadow-sm">
+                    <i data-lucide="zap" class="w-5 h-5 fill-current"></i>
+                </div>
+                <div class="leading-tight">
+                    <span class="text-xl font-extrabold tracking-tight text-brand-navy block">CLEAR</span>
+                    <span class="text-xl font-bold tracking-tight text-brand-blue block -mt-1.5">FLOW</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                <a href="index.html" class="hover:text-brand-blue transition">Home</a>
+                <a href="leakdetection.html" class="hover:text-brand-blue transition">Leak Detection</a>
+                <a href="catalogue.html" class="text-brand-blue font-bold transition">Catalogue</a>
+                <a href="about.html" class="hover:text-brand-blue transition">About</a>
+                <a href="contact.html" class="hover:text-brand-blue transition">Contact</a>
+                <a href="book.html" class="hover:text-brand-blue transition">Booking</a>
+            </nav>
+
+            <!-- Action CTA -->
+            <div>
+                <a href="book.html" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-brand-navy text-white hover:bg-brand-blue transition shadow">
+                    Book Service
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= CATALOGUE HEADER BANNER ================= -->
+    <section class="bg-white border-b border-slate-200/80 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-blue bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+                    Product Catalogue
+                </span>
+                <h1 class="text-3xl sm:text-4xl font-black text-brand-navy tracking-tight mt-3">
+                    Water Solutions for a Healthier Life
+                </h1>
+                <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+                    Browse our range of high-quality water filters, purifiers, and central descalers. Explore specifications and request pricing or installation across Botswana.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CATALOGUE LISTING ================= -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full">
+        <!-- Search & Filter Category Bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+            <div class="flex flex-wrap items-center gap-2" id="filter-buttons">
+                <button onclick="filterProducts('all')" class="filter-btn active px-4 py-1.5 rounded-lg text-xs font-bold bg-brand-navy text-white transition">
+                    All Products
+                </button>
+                <button onclick="filterProducts('purifiers')" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-semibold bg-white border border-slate-200 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">
+                    Filters & Purifiers
+                </button>
+                <button onclick="filterProducts('descalers')" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-semibold bg-white border border-slate-200 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">
+                    Central Descalers
+                </button>
+                <!-- <button onclick="filterProducts('parts')" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-semibold bg-white border border-slate-200 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">
+                    Replacement Parts
+                </button> -->
+            </div>
+        </div>
+
+        <!-- Products Dynamic Grid -->
+        <div id="product-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Populated dynamically by JS -->
+        </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="mt-auto bg-brand-dark border-t border-slate-800 text-slate-400 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <img src="assets/logo.png" alt="Clear Flow Logo" class="h-8 w-auto object-contain" 
+                         onerror="this.style.display='none'">
+                    <span class="text-lg font-bold text-white tracking-wider">CLEAR FLOW</span>
+                </div>
+
+                <nav class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+                    <a href="index.html" class="hover:text-white transition">Home</a>
+                    <a href="leakdetection.html" class="hover:text-white transition">Leak Detection</a>
+                    <a href="catalogue.html" class="text-brand-cyan transition">Catalogue</a>
+                    <a href="about.html" class="hover:text-white transition">About</a>
+                    <a href="contact.html" class="hover:text-white transition">Contact</a>
+                    <a href="book.html" class="hover:text-white transition">Booking</a>
+                </nav>
+
+                <div class="flex items-center gap-4 text-slate-400">
+                    <a href="#" class="hover:text-white transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <a href="#" class="hover:text-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] gap-4">
+                <p>© 2026 Clear Flow (Pty) Ltd. All rights reserved.</p>
+                <p class="text-slate-500">Water today. A better tomorrow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load Products Data & Render Script -->
+    <script src="products.js"></script>
+    <script>
+        lucide.createIcons();
+
+        function renderProducts(items) {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = items.map(product => `
+                <a href="product.html?id=${product.id}" class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between group block">
+                    <div>
+                        <!-- Product Image -->
+                        <div class="aspect-[4/3] bg-slate-100 flex items-center justify-center border-b border-slate-100 relative overflow-hidden">
+                            <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                            <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded bg-white/80 border border-slate-200 text-slate-600">
+                                ${product.categoryName}
+                            </span>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-baseline justify-between mb-2">
+                                <h3 class="font-bold text-brand-navy text-lg leading-snug group-hover:text-brand-blue transition">
+                                    ${product.name}
+                                </h3>
+                            </div>
+                            <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                                ${product.shortDesc}
+                            </p>
+                            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs text-slate-400 font-medium">Price:</span>
+                                <span class="text-base font-extrabold text-brand-navy">${product.price}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-0">
+                        <span class="w-full py-2.5 px-4 rounded-xl bg-brand-navy group-hover:bg-brand-blue text-white text-xs font-bold text-center block transition shadow-sm">
+                            View Details & Specs →
+                        </span>
+                    </div>
+                </a>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        function filterProducts(category) {
+            // Update active button styles
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.className = "filter-btn px-4 py-1.5 rounded-lg text-xs font-semibold bg-white border border-slate-200 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition";
+            });
+            event.target.className = "filter-btn active px-4 py-1.5 rounded-lg text-xs font-bold bg-brand-navy text-white transition";
+
+            if (category === 'all') {
+                renderProducts(productsData);
+            } else {
+                const filtered = productsData.filter(p => p.category === category);
+                renderProducts(filtered);
+            }
+        }
+
+        // Initial render
+        renderProducts(productsData);
+    </script>
+</body>
+</html>

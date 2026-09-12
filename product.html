@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Clear Flow Botswana</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0B2341',
+                            dark: '#071629',
+                            blue: '#0284C7',
+                            cyan: '#00A3E0',
+                            light: '#F0F7FF',
+                            accent: '#38BDF8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .lightbox-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            cursor: pointer;
+        }
+        .lightbox-overlay img {
+            max-width: 90vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 0.5rem;
+            cursor: zoom-in;
+            transition: transform 0.2s ease;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        }
+        .lightbox-overlay img.zoomed {
+            transform: scale(1.8);
+            cursor: zoom-out;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            font-size: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+        @media (max-width: 640px) {
+            .lightbox-overlay img {
+                max-width: 100vw;
+                max-height: 80vh;
+            }
+            .lightbox-overlay img.zoomed {
+                transform: scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- ================= NAVBAR (NO SHOPPING BAG) ================= -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/logo.png" alt="Clear Flow Logo" class="h-10 w-auto object-contain" 
+                     onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')">
+                <div class="hidden w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-brand-cyan shadow-sm">
+                    <i data-lucide="zap" class="w-5 h-5 fill-current"></i>
+                </div>
+                <div class="leading-tight">
+                    <span class="text-xl font-extrabold tracking-tight text-brand-navy block">CLEAR</span>
+                    <span class="text-xl font-bold tracking-tight text-brand-blue block -mt-1.5">FLOW</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                <a href="index.html" class="hover:text-brand-blue transition">Home</a>
+                <a href="leakdetection.html" class="hover:text-brand-blue transition">Leak Detection</a>
+                <a href="catalogue.html" class="text-brand-blue font-bold transition">Catalogue</a>
+                <a href="about.html" class="hover:text-brand-blue transition">About</a>
+                <a href="contact.html" class="hover:text-brand-blue transition">Contact</a>
+                <a href="book.html" class="hover:text-brand-blue transition">Booking</a>
+            </nav>
+
+            <div>
+                <a href="book.html" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-brand-navy text-white hover:bg-brand-blue transition shadow">
+                    Book Service
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= BREADCRUMBS ================= -->
+    <div class="bg-white border-b border-slate-200/80 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-500 flex items-center gap-2">
+            <a href="index.html" class="hover:text-brand-blue">Home</a>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            <a href="catalogue.html" class="hover:text-brand-blue">Catalogue</a>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            <span id="breadcrumb-title" class="text-brand-navy font-semibold">Product Details</span>
+        </div>
+    </div>
+
+    <!-- ================= PRODUCT DETAIL CONTAINER ================= -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full" id="product-content">
+        <!-- Rendered by JavaScript -->
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="mt-auto bg-brand-dark border-t border-slate-800 text-slate-400 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <img src="assets/logo.png" alt="Clear Flow Logo" class="h-8 w-auto object-contain" 
+                         onerror="this.style.display='none'">
+                    <span class="text-lg font-bold text-white tracking-wider">CLEAR FLOW</span>
+                </div>
+
+                <nav class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+                    <a href="index.html" class="hover:text-white transition">Home</a>
+                    <a href="leakdetection.html" class="hover:text-white transition">Leak Detection</a>
+                    <a href="catalogue.html" class="text-brand-cyan transition">Catalogue</a>
+                    <a href="about.html" class="hover:text-white transition">About</a>
+                    <a href="contact.html" class="hover:text-white transition">Contact</a>
+                    <a href="book.html" class="hover:text-white transition">Booking</a>
+                </nav>
+
+                <div class="flex items-center gap-4 text-slate-400">
+                    <a href="#" class="hover:text-white transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <a href="#" class="hover:text-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] gap-4">
+                <p>© 2026 Clear Flow (Pty) Ltd. All rights reserved.</p>
+                <p class="text-slate-500">Water today. A better tomorrow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load Products Data & Render Single Item -->
+    <script src="products.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Get product ID from URL parameter (e.g. product.html?id=under-sink-ro)
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id');
+        const product = productsData.find(p => p.id === productId);
+
+        const container = document.getElementById('product-content');
+        const breadcrumbTitle = document.getElementById('breadcrumb-title');
+
+        if (product) {
+            document.title = `${product.name} | Clear Flow Botswana`;
+            breadcrumbTitle.textContent = product.name;
+
+            container.innerHTML = `
+                <div class="grid lg:grid-cols-12 gap-10 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+                    <!-- Left: Image Showcase Box -->
+                    <div class="lg:col-span-6 space-y-4">
+                        <div class="aspect-square bg-slate-100 rounded-2xl flex items-center justify-center border border-slate-200/80 relative overflow-hidden cursor-zoom-in" id="product-image-container">
+                            <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover" id="product-image">
+                            <span class="absolute top-4 left-4 bg-brand-navy text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                                ${product.categoryName}
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-400 text-center">Click image to enlarge</p>
+                    </div>
+
+                    <!-- Right: Product Information & Inquire Actions -->
+                    <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div>
+                                <span class="text-xs font-bold text-brand-blue uppercase tracking-wider">Product Overview</span>
+                                <h1 class="text-2xl sm:text-3xl font-black text-brand-navy tracking-tight mt-1">${product.name}</h1>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-baseline gap-3">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Estimated Price:</span>
+                                <span class="text-2xl font-black text-brand-navy">${product.price}</span>
+                                <span class="text-xs text-slate-400">(Excl. installation if required)</span>
+                            </div>
+
+                            <p class="text-sm text-slate-600 leading-relaxed">${product.fullDesc}</p>
+
+                            <!-- Action Inquiry Buttons -->
+                        <div class="space-y-3 pt-6 border-t border-slate-100">
+                            <!-- WhatsApp Direct Inquiry Button -->
+                            <a href="https://wa.me/26774265215?text=Hi%20Clear%20Flow,%20I'm%20inquiring%20about%20the%20${encodeURIComponent(product.name)}" 
+                               target="_blank" 
+                               class="w-full py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                <span>Inquire / Order via WhatsApp</span>
+                            </a>
+
+                            <div class="flex gap-3">
+                                <a href="contact.html" class="flex-1 py-3 px-4 rounded-xl border border-slate-200 text-brand-navy hover:border-brand-blue hover:text-brand-blue font-semibold text-xs text-center transition">
+                                    Send Email Inquiry
+                                </a>
+                                <a href="book.html" class="flex-1 py-3 px-4 rounded-xl bg-brand-navy hover:bg-brand-blue text-white font-semibold text-xs text-center transition">
+                                    Book Leak Service
+                                </a>
+                            </div>
+
+                            <!-- Trust Info -->
+                            <div class="grid grid-cols-2 gap-2 pt-2 text-[11px] text-slate-500">
+                                <div class="flex items-center gap-1.5"><i data-lucide="truck" class="w-3.5 h-3.5 text-brand-blue"></i> Botswana Delivery</div>
+                                <div class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-blue"></i> Warranty Included</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            lucide.createIcons();
+        } else {
+            // Fallback if product not found
+            container.innerHTML = `
+                <div class="text-center py-20 bg-white rounded-3xl border border-slate-200">
+                    <h2 class="text-xl font-bold text-brand-navy">Product Not Found</h2>
+                    <p class="text-xs text-slate-500 mt-2">The product you are looking for does not exist or has been removed.</p>
+                    <a href="catalogue.html" class="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy text-white text-xs font-bold hover:bg-brand-blue transition">
+                        ← Back to Catalogue
+                    </a>
+                </div>
+            `;
+            lucide.createIcons();
+        }
+
+        // Lightbox for product image
+        const imgContainer = document.getElementById('product-image-container');
+        const productImg = document.getElementById('product-image');
+        if (imgContainer && productImg) {
+            let overlay = null;
+            let zoomed = false;
+
+            function openLightbox() {
+                overlay = document.createElement('div');
+                overlay.className = 'lightbox-overlay';
+                const img = document.createElement('img');
+                img.src = productImg.src;
+                img.alt = productImg.alt;
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+                document.body.style.overflow = 'hidden';
+
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === overlay) {
+                        closeLightbox();
+                    } else if (e.target === img) {
+                        if (zoomed) {
+                            img.classList.remove('zoomed');
+                            zoomed = false;
+                        } else {
+                            img.classList.add('zoomed');
+                            zoomed = true;
+                        }
+                    }
+                });
+
+                document.addEventListener('keydown', function escHandler(e) {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                        document.removeEventListener('keydown', escHandler);
+                    }
+                });
+            }
+
+            function closeLightbox() {
+                if (overlay) {
+                    overlay.remove();
+                    overlay = null;
+                    document.body.style.overflow = '';
+                    zoomed = false;
+                }
+            }
+
+            imgContainer.addEventListener('click', openLightbox);
+        }
+    </script>
+</body>
+</html>

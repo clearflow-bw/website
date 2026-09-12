@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Leak Detection Service | Clear Flow Botswana</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0B2341',
+                            dark: '#071629',
+                            blue: '#0284C7',
+                            cyan: '#00A3E0',
+                            light: '#F0F7FF',
+                            accent: '#38BDF8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #preferred_date::-webkit-calendar-picker-indicator {
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/logo.png" alt="Clear Flow Logo" class="h-10 w-auto object-contain" 
+                     onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')">
+                <!-- Fallback if logo.png not yet in assets folder -->
+                <div class="hidden w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center text-brand-cyan shadow-sm">
+                    <i data-lucide="zap" class="w-5 h-5 fill-current"></i>
+                </div>
+                <div class="leading-tight">
+                    <span class="text-xl font-extrabold tracking-tight text-brand-navy block">CLEAR</span>
+                    <span class="text-xl font-bold tracking-tight text-brand-blue block -mt-1.5">FLOW</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                <a href="index.html" class="hover:text-brand-blue transition">Home</a>
+                <a href="leakdetection.html" class="hover:text-brand-blue transition">Leak Detection</a>
+                <a href="catalogue.html" class="hover:text-brand-blue transition">Catalogue</a>
+                <a href="about.html" class="hover:text-brand-blue transition">About</a>
+                <a href="contact.html" class="hover:text-brand-blue transition">Contact</a>
+                <a href="book.html" class="text-brand-blue font-semibold transition">Booking</a>
+            </nav>
+
+            <!-- Right CTA -->
+            <div class="flex items-center">
+                <a href="book.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-brand-navy text-white hover:bg-brand-blue transition shadow">
+                    Book Service
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= PAGE HEADER & STEP INDICATOR ================= -->
+    <section class="bg-white border-b border-slate-200/80 pt-10 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-blue bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+                    Leak Detection
+                </span>
+                <h1 class="text-3xl sm:text-4xl font-black text-brand-navy tracking-tight mt-3">
+                    Book Your Leak Detection Service
+                </h1>
+                <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+                    Our team uses advanced acoustic technology to find hidden underground leaks, without unnecessary disruption to your property.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MAIN BOOKING CONTENT ================= -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1">
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- LEFT COLUMN: Service Info & Highlights -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-sm space-y-5">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center border border-blue-100 shadow-sm">
+                            <i data-lucide="waves" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-navy text-lg leading-snug">Underground Water Leakage Detection</h3>
+                            <span class="text-xs text-brand-blue font-medium">Acoustic & Pressure Diagnostics</span>
+                        </div>
+                    </div>
+
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        We use non-invasive acoustic technology to detect underground water leaks, identify the source, and provide a detailed report with our findings and recommendations.
+                    </p>
+
+                    <div class="space-y-3 pt-2 border-t border-slate-100 text-sm text-slate-700">
+                        <div class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5"></i>
+                            <span><strong>Finds hidden leaks:</strong> Non-invasive acoustic location with no unnecessary digging.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5"></i>
+                            <span><strong>Saves water & costs:</strong> Stop high water utility bills immediately.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5"></i>
+                            <span><strong>Minimal disruption:</strong> Fast on-site testing for residential & commercial properties.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5"></i>
+                            <span><strong>Detailed report:</strong> Written diagnostic with clear repair advice.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Urgent Help Box -->
+                <div class="bg-gradient-to-br from-brand-navy to-slate-900 text-white rounded-2xl p-6 shadow-md space-y-3 border border-slate-800">
+                    <div class="flex items-center gap-2 text-brand-cyan text-xs font-bold uppercase tracking-wider">
+                        <i data-lucide="phone-call" class="w-4 h-4"></i> Urgent Assistance
+                    </div>
+                    <p class="text-xs text-slate-300">
+                        Have an emergency burst pipe or major flooding? Call our inspection dispatch directly.
+                    </p>
+                    <a href="tel:+267 74 265 215" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-brand-cyan transition">
+                        <span>📞 +267 74 265 215</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Booking Form (FormSubmit Integrated) -->
+            <div class="lg:col-span-7">
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
+                    
+                    <!-- FormSubmit Endpoint Form -->
+                    <!-- NOTE: Replace YOUR_EMAIL_OR_HASH with your FormSubmit email or masked token -->
+                    <form action="https://formsubmit.co/clearflowbw@gmail.com" method="POST" class="space-y-8">
+                        
+                        <!-- FormSubmit Configuration Settings -->
+                        <input type="hidden" name="_subject" value="New Leak Detection Booking Request - Clear Flow">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <!-- SECTION 1: Property & Service Details -->
+                        <div class="space-y-4">
+                            <h3 class="text-sm font-bold text-brand-navy uppercase tracking-wider flex items-center gap-2 pb-2 border-b border-slate-100">
+                                <span class="w-5 h-5 rounded-full bg-brand-light text-brand-blue text-xs flex items-center justify-center font-bold">1</span>
+                                Property & Service Details
+                            </h3>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">
+                                    Location / Address <span class="text-red-500">*</span>
+                                </label>
+                                <div class="relative">
+                                    <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 absolute left-3 top-3.5"></i>
+                                    <input type="text" name="location" required 
+                                           placeholder="e.g. Gaborone, Block 6, Tlokweng, Phakalane..." 
+                                           class="w-full pl-9 pr-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition">
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">
+                                        Property Type <span class="text-red-500">*</span>
+                                    </label>
+                                    <select name="property_type" required class="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition">
+                                        <option value="" disabled selected>Select type</option>
+                                        <option value="Residential">Residential House</option>
+                                        <option value="Commercial">Commercial / Office</option>
+                                        <option value="Industrial">Industrial / Warehouse</option>
+                                    </select>
+                                </div>
+
+								<div>
+									<label class="block text-xs font-semibold text-slate-700 mb-1">
+								<div>
+									<label class="block text-xs font-semibold text-slate-700 mb-1">
+										Preferred Date <span class="text-red-500">*</span>
+									</label>
+									<div class="relative">
+										<input type="date" id="preferred_date" name="preferred_date" required min=""
+											class="w-full pl-9 pr-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition text-slate-700 cursor-pointer">
+										<i data-lucide="calendar" class="w-4 h-4 text-slate-400 absolute left-3 top-3.5 pointer-events-none"></i>
+									</div>
+								</div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">
+                                        Preferred Time
+                                    </label>
+                                    <select name="preferred_time" class="w-full px-3 py-3 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition">
+                                        <option value="Morning (08:00 - 12:00)">Morning (08:00 - 12:00)</option>
+                                        <option value="Afternoon (12:00 - 16:30)">Afternoon (12:00 - 16:30)</option>
+                                        <option value="Other">Other (write in additional info)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 2: Your Contact Details -->
+                        <div class="space-y-4">
+                            <h3 class="text-sm font-bold text-brand-navy uppercase tracking-wider flex items-center gap-2 pb-2 border-b border-slate-100">
+                                <span class="w-5 h-5 rounded-full bg-brand-light text-brand-blue text-xs flex items-center justify-center font-bold">2</span>
+                                Your Contact Details
+                            </h3>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">
+                                    Full Name <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" name="full_name" required 
+                                       placeholder="Enter your full name" 
+                                       class="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition">
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">
+                                        Phone Number (WhatsApp) <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="tel" name="phone" required 
+                                           placeholder="e.g. +267 74 265 215" 
+                                           class="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition">
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">
+                                        Email Address <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="email" name="email" required 
+                                           placeholder="Enter your email address" 
+                                           class="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 3: Additional Information -->
+                        <div class="space-y-4">
+                            <h3 class="text-sm font-bold text-brand-navy uppercase tracking-wider flex items-center gap-2 pb-2 border-b border-slate-100">
+                                <span class="w-5 h-5 rounded-full bg-brand-light text-brand-blue text-xs flex items-center justify-center font-bold">3</span>
+                                Additional Information
+                            </h3>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">
+                                    Notes or Symptoms <span class="text-slate-400 font-normal">(Optional)</span>
+                                </label>
+                                <textarea name="notes" rows="3" 
+                                          placeholder="Tell us more about the issue (e.g., spinning water meter when taps are closed, damp walls, low pressure, etc.)..." 
+                                          class="w-full px-3 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit CTA & Security Disclaimer -->
+                        <div class="pt-2 space-y-3">
+                            <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-brand-navy hover:bg-brand-blue text-white font-bold text-sm tracking-wide shadow-md hover:shadow-lg transition duration-200 flex items-center justify-center gap-2">
+                                <span>Confirm Booking</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+
+                            <p class="text-center text-[11px] text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+                                <i data-lucide="lock" class="w-3.5 h-3.5 text-brand-blue"></i>
+                                Your information is secure and will only be used to contact you about your booking.
+                            </p>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ================= TRUST BADGES BAR ================= -->
+    <section class="bg-white border-t border-b border-slate-200 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center gap-2">
+                    <i data-lucide="user-check" class="w-6 h-6 text-brand-blue"></i>
+                    <span class="text-xs font-bold text-brand-navy">Experienced Technicians</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i data-lucide="cpu" class="w-6 h-6 text-brand-blue"></i>
+                    <span class="text-xs font-bold text-brand-navy">Advanced Equipment</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i data-lucide="file-check-2" class="w-6 h-6 text-brand-blue"></i>
+                    <span class="text-xs font-bold text-brand-navy">Transparent Process</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i data-lucide="map-pin" class="w-6 h-6 text-brand-blue"></i>
+                    <span class="text-xs font-bold text-brand-navy">Local Botswana Team</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="mt-auto bg-brand-dark border-t border-slate-800 text-slate-400 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <!-- Footer Logo -->
+                <div class="flex items-center gap-3">
+                    <img src="assets/logo.png" alt="Clear Flow Logo" class="h-8 w-auto object-contain" 
+                         onerror="this.style.display='none'">
+                    <span class="text-lg font-bold text-white tracking-wider">CLEAR FLOW</span>
+                </div>
+
+                <nav class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+                    <a href="index.html" class="hover:text-white transition">Home</a>
+                    <a href="leakdetection.html" class="hover:text-white transition">Leak Detection</a>
+                    <a href="catalogue.html" class="hover:text-white transition">Catalogue</a>
+                    <a href="about.html" class="hover:text-white transition">About</a>
+                    <a href="contact.html" class="hover:text-white transition">Contact</a>
+                    <a href="book.html" class="text-brand-cyan font-semibold transition">Booking</a>
+                </nav>
+
+                <div class="flex items-center gap-4 text-slate-400">
+                    <a href="#" class="hover:text-white transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <a href="#" class="hover:text-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] gap-4">
+                <p>© 2026 Clear Flow (Pty) Ltd. All rights reserved.</p>
+                <p class="text-slate-500">Water today. A better tomorrow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+
+        const calIcon = document.querySelector('[data-lucide="calendar"]');
+        const dateInput = document.getElementById('preferred_date');
+        if (calIcon && dateInput) {
+            calIcon.parentElement.addEventListener('click', () => dateInput.showPicker && dateInput.showPicker());
+        }
+
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.min = today;
+        }
+    </script>
+</body>
+</html>
